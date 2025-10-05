@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Safety Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDygUPVH-Cjwov0bAj37EBsREW4E1FYy7U&callback=initMap" async defer></script>
+   
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Women Safety Companion</h1>
+        <div id="map"></div>
+        <button id="panicButton">Help! I'm in Trouble</button>
+        
+        <!-- Section to display live location -->
+        <div id="locationDisplay">
+            <p><strong>Your Location:</strong></p>
+            <p id="locationLat"></p>
+            <p id="locationLng"></p>
+        </div>
+
+        <!-- Form to send email through Formspree -->
+        <form action="https://formspree.io/f/xeoekzzb" method="POST" id="sosForm">
+            <input type="hidden" name="email" value="thoibasaleem389@gmail.com">  <!-- Static email -->
+            <input type="hidden" name="message" id="sosMessage">  <!-- Dynamic alert message -->
+            <input type="hidden" name="location" id="sosLocation">  <!-- Dynamic location (lat, lng) -->
+            <button type="submit" class="send-sos-btn">Send SOS Alert</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
